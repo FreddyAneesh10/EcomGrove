@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   // IconWidget(icon: Icons.shopify_outlined, color: Colors.green),
                   Text(
-                    'E-commerce',
+                    'E-comGrove',
                     style: GoogleFonts.cabin(fontSize: 20),
                   ),
                   IconWidget(icon: Icons.menu)
