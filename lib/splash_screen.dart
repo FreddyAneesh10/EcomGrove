@@ -16,18 +16,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Timer(
-    //   const Duration(seconds: 2),
-    //   () =>
-    //       Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(
-    //       builder: (context) => const BottomnavWidget(
-    //         index: 0,
-    //       ),
-    //     ),
-    //   ),
-    // );
+    Timer(
+      const Duration(seconds: 2),
+      () =>
+          Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const BottomnavWidget(
+            index: 0,
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'VogueVault',
+                  'E-comGrove',
                   style: GoogleFonts.cabin(fontSize: 20),
                 ),
               ],
