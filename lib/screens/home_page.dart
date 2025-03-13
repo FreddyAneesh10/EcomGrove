@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dio/dio.dart';
-import 'package:e_commerce/category_model.dart';
-import 'package:e_commerce/detail_page.dart';
+import 'package:e_commerce/models/category_model.dart';
+import 'package:e_commerce/screens/detail_page.dart';
 import 'package:e_commerce/widget/icon_widget.dart';
 import 'package:e_commerce/widget/image_widget.dart';
-import 'package:e_commerce/widget/product_response_model.dart';
+import 'package:e_commerce/models/product_response_model.dart';
 import 'package:e_commerce/widget/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -153,12 +153,12 @@ class _HomePageState extends State<HomePage> {
                         physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.vertical,
                         gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          childAspectRatio: 0.6,
-                          mainAxisSpacing: 15.0,
-                          crossAxisSpacing: 4.0,
-                        ),
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.6,
+                            mainAxisSpacing: 15.0,
+                            crossAxisSpacing: 4.0,
+                          ),
                         padding: const EdgeInsets.all(0),
                         itemCount: productResponseModel!.products!.length,
                         itemBuilder: (context, index) {
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                                   const EdgeInsets.only(left: 10, right: 10),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black),
+                                  border: Border.all(color: Colors.grey),
                                   borderRadius: BorderRadius.circular(25),
                                 ),
                                 child: Padding(
@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        width: 42,
+                                        width: 50,
                                         child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,

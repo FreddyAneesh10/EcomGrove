@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:e_commerce/cart_model.dart';
+import 'package:e_commerce/models/cart_model.dart';
 import 'package:e_commerce/widget/appbar_widget.dart';
 import 'package:e_commerce/widget/button_widget.dart';
 import 'package:e_commerce/widget/icon_widget.dart';
@@ -160,11 +160,11 @@ class _CartPageState extends State<CartPage> {
                                   child: Container(
                                     width: double.infinity,
                                     decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.green),
+                                      border: Border.all(color: Colors.grey),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
                                     height: MediaQuery.of(context).size.height /
-                                        4.5,
+                                        4.4,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.end,
@@ -322,7 +322,8 @@ class _CartPageState extends State<CartPage> {
                                                         "Are you sure want to delete this item?"),
                                                     actions: <Widget>[
                                                       TextButton(
-                                                        child: const Text("Cancel",
+                                                        child: const Text(
+                                                            "Cancel",
                                                             style: TextStyle(
                                                                 color: Colors
                                                                     .blue)),
@@ -408,14 +409,33 @@ class _CartPageState extends State<CartPage> {
                     const Spacer(),
                     cartBox.isEmpty
                         ? const SizedBox()
-                        : Padding(
-                            padding: const EdgeInsets.only(bottom: 10),
-                            child: ButtonWidget(
-                              text: "Proceed to pay",
-                              icon: Icons.lightbulb_outline,
-                              onPressed: () {
-                                openCheckout();
-                              },
+                        : Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 40),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ButtonWidget(
+                                    color: Colors.white,
+                                    textColor: Colors.black,
+                                    width:
+                                        MediaQuery.of(context).size.width / 2,
+                                    text: "Orders",
+                                    icon: Icons.lightbulb_outline,
+                                  ),
+                                  ButtonWidget(
+                                    width:
+                                        MediaQuery.of(context).size.width / 2,
+                                    text: "Continue",
+                                    textColor: Colors.white,
+                                    icon: Icons.lightbulb_outline,
+                                    onPressed: () {
+                                      openCheckout();
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                   ],

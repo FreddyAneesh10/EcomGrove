@@ -1,12 +1,12 @@
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
-import 'package:e_commerce/cart_model.dart';
+import 'package:e_commerce/models/cart_model.dart';
 import 'package:e_commerce/widget/button_widget.dart';
 import 'package:e_commerce/widget/icon_widget.dart';
 import 'package:e_commerce/widget/image_widget.dart';
-import 'package:e_commerce/widget/product_response_model.dart';
+import 'package:e_commerce/models/product_response_model.dart';
 import 'package:e_commerce/widget/text_widget.dart';
-import 'package:e_commerce/wish_list_model.dart';
+import 'package:e_commerce/models/wish_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -119,7 +119,7 @@ class _DetailPageState extends State<DetailPage> {
                     width: MediaQuery.of(context).size.width / 1.1,
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.0),
-                      border: Border.all(color: Colors.black),
+                      border: Border.all(color: Colors.grey),
                       borderRadius: const BorderRadius.all(
                         Radius.circular(25),
                       ),
@@ -249,6 +249,8 @@ class _DetailPageState extends State<DetailPage> {
             const SizedBox(height: 20),
             ButtonWidget(
               onPressed: _toggleCart,
+              width: MediaQuery.of(context).size.width/1.1,
+              textColor: Colors.white,
               text: isAddToCart ? 'Added to cart' : 'Add to cart',
               icon: isAddToCart
                   ? Icons.check_circle_outline

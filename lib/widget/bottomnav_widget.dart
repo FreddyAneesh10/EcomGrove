@@ -1,11 +1,12 @@
-import 'package:e_commerce/cart_page.dart';
-import 'package:e_commerce/home_page.dart';
+import 'package:e_commerce/screens/home_page.dart';
 import 'package:e_commerce/widget/icon_widget.dart';
-import 'package:e_commerce/wishlist_page.dart';
+import 'package:e_commerce/screens/wishlist_page.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/cart_page.dart';
+
 int pageIndex = 0;
-final pages = [const HomePage(), WishlistPage(), CartPage()];
+final pages = [HomePage(), WishlistPage(), CartPage()];
 
 class BottomnavWidget extends StatefulWidget {
   final int index;

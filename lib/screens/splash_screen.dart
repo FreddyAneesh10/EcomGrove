@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:e_commerce/home_page.dart';
+import 'package:e_commerce/screens/home_page.dart';
 import 'package:e_commerce/widget/bottomnav_widget.dart';
 import 'package:e_commerce/widget/text_widget.dart';
 import 'package:flutter/material.dart';

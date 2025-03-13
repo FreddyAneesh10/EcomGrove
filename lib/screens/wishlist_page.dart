@@ -1,10 +1,10 @@
-import 'package:e_commerce/detail_page.dart';
+import 'package:e_commerce/screens/detail_page.dart';
 import 'package:e_commerce/widget/appbar_widget.dart';
 import 'package:e_commerce/widget/bottomnav_widget.dart';
 import 'package:e_commerce/widget/icon_widget.dart';
 import 'package:e_commerce/widget/image_widget.dart';
 import 'package:e_commerce/widget/text_widget.dart';
-import 'package:e_commerce/wish_list_model.dart';
+import 'package:e_commerce/models/wish_list_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -105,7 +105,7 @@ class _WishlistPageState extends State<WishlistPage> {
                       padding: const EdgeInsets.only(left: 10, right: 10),
                       child: Container(
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
+                          border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: Padding(

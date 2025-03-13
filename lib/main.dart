@@ -1,10 +1,10 @@
-import 'package:e_commerce/splash_screen.dart';
-import 'package:e_commerce/wish_list_model.dart';
+import 'package:e_commerce/screens/splash_screen.dart';
+import 'package:e_commerce/models/wish_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'cart_model.dart';
+import 'models/cart_model.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -7,40 +7,44 @@ class ButtonWidget extends StatelessWidget {
   final void Function()? onPressed;
   final String text;
   final Color? color;
+  final Color? textColor;
+  final double? width;
   final IconData? icon;
-  final  BorderSide? side;
+  final BorderSide? side;
+
   const ButtonWidget({
     super.key,
     this.onPressed,
     required this.text,
-    this.color,  this.icon, this.side,
+    this.color,
+    this.icon,
+    this.side,
+    this.width, this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: MediaQuery.of(context).size.width / 1.5,
-        height: 50,
+        width: width,
+        height: 60,
         child: ElevatedButton(
           style: ButtonStyle(
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-               RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-                side: BorderSide(color: Colors.green),
+              RoundedRectangleBorder(
+                // borderRadius: BorderRadius.circular(15),
+                side:BorderSide(color: Colors.grey), // Use provided side or none
               ),
             ),
-            backgroundColor: const WidgetStatePropertyAll(Colors.green),
+            backgroundColor: MaterialStatePropertyAll(color ?? Colors.blue), // Fix here
           ),
-          onPressed:
-            onPressed
-          ,
+          onPressed: onPressed,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextWidget(
                 text: text,
-                  color: Colors.white,
+                color: textColor,
                 size: 15,
               ),
             ],
